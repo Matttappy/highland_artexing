@@ -1,0 +1,100 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{metaDescription}}">
+    <meta name="keywords" content="{{metaKeywords}}">
+    <title>{{Title}}</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link rel="stylesheet" href="{{root}}font-awesome/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Passion+One:400,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,700,600italic,700italic' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+  <header>
+    <div class="main--navigation">
+      <div class="row">
+        <div class="smal-12 columns">
+          <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="large">
+              <div class="mobile--header">
+                <a href="{{root}}/" alt="Highland Artexing Logo"><img class="logo" src="{{root}}assets/img/logo.jpg"/></a>
+                <img class="buy" src="{{root}}assets/img/buy-with-confidence-logo.jpg"/>
+                <span class="logo-type">Highland Artexing</span>
+                <a href="https://www.facebook.com/Highland-Artexing-And-Decorating-950211935024027/" target="_blank" alt="Highland Artexing and Decorating Facebook page">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span></a>
+              </div>
+              <div class="menu-area">
+                <button class="menu-icon" type="button" data-toggle></button>
+                <div class="title-bar-title">Menu</div>
+              </div>
+          </div>
+          <div class="top-bar" id="example-menu">
+            <div class="top-bar-left">  
+              
+                <a href="{{root}}/" alt="Highland Artexing Desktop logo"><img class="logo" src="{{root}}assets/img/logo.jpg"/></a>
+                <img class="buy" src="{{root}}assets/img/buy-with-confidence-logo.jpg"/>
+                <span class="logo-type">Highland Artexing</span>
+              
+            </div>
+            <div class="top-bar-right">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li><a href="{{root}}/services.html" alt="Highland Artexing Services">Our Services</a></li>
+                <li><a href="{{root}}/customer-reviews.html" alt="Our great decorating reviews North Devon">Our Customer Reviews</a></li>
+                <li><a href="{{root}}/highland-artexing-news.html" alt="Decorating news and our latest projects">News</a></li>
+                <li><a href="{{root}}/contact.html" alt="Fill out our form or call Highland Artexing">Contact Us</a></li>
+                <li class="facebook show-for-large"><a href="https://www.facebook.com/Highland-Artexing-And-Decorating-950211935024027/" target="_blank" alt="Highland Artexing and Decorating Facebook page">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span><span class="facebook-text">Find us on Facebook</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> body}}
+
+    <footer>
+      <div class="row">
+        <div class="small-12 medium-6 columns left">
+          <p class="footer-text left">&copy; Copyright Highland Artexing</p>
+        </div>
+        <div class="smll-12 medium-6 columns right">
+          <p class="footer-text right">Website designed and built by <a href="http://www.matthewtapp.com" target="_blank" alt="Matthew Tapp Web Design">Matthew Tapp</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script src="{{root}}assets/js/app.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){       
+        $('.homepage--carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            autoplay:true,
+            autoplaySpeed: 2000,
+            arrows:true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+      });
+    </script>
+
+  </body>
+</html>

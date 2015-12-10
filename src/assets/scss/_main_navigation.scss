@@ -1,0 +1,99 @@
+/*Styling for the main navigation*/
+header {
+	background: $primary-color;
+	.top-bar {
+		li {
+			font-weight: bold;
+			a {
+				&:hover {
+					color: lighten($primary-color, 50%);
+				}
+			}
+		}
+		background-color: $primary-color;
+		.top-bar-left {
+			max-width: rem-calc(400);
+			img {
+				padding: rem-calc(10 10 10 0);
+			}
+			img.logo {
+				width: 30%;
+			}
+			img.buy {
+				width: 15%;
+			}
+			.logo-type {
+				color: $white;
+				font-family: 'Passion One', Helvetica, Arial, cursive;
+				font-size: rem-calc(26);
+				font-weight: 700;
+			}
+		}
+		.top-bar-right {
+			margin-top: 2%;
+			ul {
+				li.facebook {
+					.fa-inverse {
+						color: $white;
+					}
+					.fa-circle {
+						color: $facebook;
+					}
+				}
+			}
+		}
+	}
+}
+
+.menu-icon, .title-bar-title {
+	float: right;
+}
+
+.menu-area {
+	margin-top:4%;
+}
+
+.mobile--header {
+	float: left;
+	width: 75%;
+	img.logo {
+		width: 20%;
+	}
+	img.buy {
+		width: 10%;
+	}
+	.logo-type {
+		font-family: 'Passion One', Helvetica, Arial, cursive;
+		font-size: rem-calc(16);
+		font-weight: 700;
+	}
+}
+
+/*Custom media query small desktop*/
+@media screen and (min-width:1024px) and (max-width:1181px){
+	header .top-bar .top-bar-right {
+		margin-top: 2.4%!important;
+	}
+  	.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow a {
+  		padding-right: rem-calc(10)!important;
+  	}
+  	.facebook-text {
+  		display: none!important;
+  	}
+}
+
+@media screen and (min-width:410px) and (max-width:1024px){
+	.menu-area {
+	margin-top: 5%;
+	}
+}
+
+/*Custom media query small*/
+@media screen and (max-width:1024px) {
+  .top-bar-left {
+  	display: none;
+  }
+
+}
+
+

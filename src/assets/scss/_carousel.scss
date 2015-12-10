@@ -1,0 +1,58 @@
+/*Styling for the homepage carousel*/
+
+.carousel--wrapper {
+	background: $light-gray;
+	margin-bottom: rem-calc(30);
+	.slick-slider {
+		margin-bottom: 0;
+		img {
+			margin: auto;
+		}
+	}
+	.slick-dots li button {
+		border-radius: rem-calc(10);
+		background: $light-gray;
+		width: 75%;
+		height: 75%;
+		&:before {
+			content: "";
+		}
+	}
+	li.slick-active button {
+		background: $primary-color;
+	}
+	.slick-prev {
+		&:before {
+			content: "\f053";
+			font-family: FontAwesome;
+			color: $primary-color;
+			font-size: rem-calc(32);
+		}
+	}
+	.slick-next {
+		&:before {
+			content: "\f054";
+			font-family: FontAwesome;
+			color: $primary-color;
+			font-size: rem-calc(32);
+		}
+	}
+	@media screen and #{breakpoint(small)} {
+		.slick-prev:before,
+		.slick-next:before {
+	   		display:none;
+		}	
+	}
+	@media screen and #{breakpoint(medium)} {
+		.slick-prev {
+			left: rem-calc(25);
+		}
+		.slick-next {
+			right: rem-calc(25);
+		}
+		.slick-prev:before,
+		.slick-next:before {
+	   		display:block;
+		}	
+	}
+}
